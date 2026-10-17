@@ -48,7 +48,8 @@ then:
 git clone https://github.com/ohto121/lilith
 cd lilith
 make
-./lilith    # run from a tty, not from inside another compositor
+sudo make install    # binary ends up in /usr/local/bin
+lilith               # from a tty, not from inside another compositor
 ```
 
 works from a tty; if you use a display manager that reads wayland-sessions it
