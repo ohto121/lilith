@@ -1,0 +1,4 @@
+lilith
+*.o
+*-protocol.h
+lilith-*.tar.gz

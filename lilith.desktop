@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Lilith
+Comment=Lilith Wayland Compositor
+Exec=lilith
+Type=Application
