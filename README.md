@@ -24,8 +24,9 @@ and contributes fixes back here.
   temperature, keyboard layout). it can sit on any screen edge, can be
   transparent or opaque, hides with an animation, and has its own tag
   switching animation. drawn with fcft/pixman, needs no extra daemon
-- when you drag out a rectangle on empty canvas, the new window opens inside
-  it (there's an outline showing where it will land)
+- **spawn region**: drag a rectangle on the empty canvas and the new window
+  opens inside it. you can pick how it looks in config — outline, filled, or
+  invisible (SPAWNREGION_STYLE in config_appearance.h)
 - by default every tag shares one canvas view; flip `TAG_KEEP_VIEW` in
   `config_animation.h` if you'd rather have each tag remember its own spot
 - keyboard layouts (us/ru etc.) with a layout indicator in the bar, proper
@@ -50,15 +51,14 @@ make
 ./lilith    # run from a tty, not from inside another compositor
 ```
 
-if you want a desktop session entry, `lilith.desktop` is in the repo — put it
-in `/usr/share/wayland-sessions/` if your display manager/launcher reads
-those.
+works from a tty; if you use a display manager that reads wayland-sessions it
+should be able to start lilith directly.
 
 ## config
 
 everything lives in `config/`. yes, all of it:
 
-- `config_appearance.h` — borders, gaps, wallpaper, the spawn rectangle
+- `config_appearance.h` — borders, gaps, wallpaper, the spawn region
 - `config_animation.h` — tag switch / open / close / zoom animations, inertia
 - `config_bar.h` — the status bar: position, modules, colours, font
 - `config_input.h` — keyboard layouts, touchpad, tablet
