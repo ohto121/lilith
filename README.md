@@ -13,6 +13,9 @@ and contributes fixes back here.
 
 - floating windows on an infinite canvas: drag things wherever, pan the whole
   view with the mouse, throw a window and it keeps sliding for a bit (inertia)
+- double borders: every window has a separate inner and outer border, each
+  with its own width and color, plus dedicated variants for focused / urgent /
+  unfocused — so you can do subtle stacked outlines or just one plain border
 - the canvas zooms with the scroll wheel, and all the animations (tag switch,
   window open/close, zoom) follow the current zoom level so nothing looks off
 - `zoomfit` (win+z): zooms so every open window fits on the screen at once.
